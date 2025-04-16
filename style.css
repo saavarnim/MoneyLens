@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+  
+  form, .budget, .summary {
+    margin-bottom: 20px;
+  }
+  
+  input, select, button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  #transaction-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #transaction-list li {
+    padding: 10px;
+    background: #eee;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #chart-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  #dashboard {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .chart-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .chart-controls button {
+    background: #e0eaff;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .chart-controls button:hover {
+    background-color: #d0dbf2;
+  }
+  
+  .chart {
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  
+  .budget-summary p {
+    background: #fff;
+    padding: 8px;
+    margin: 6px 0;
+    border-left: 5px solid #ccc;
+    border-radius: 6px;
+  }
+  .chart-controls button i {
+    margin-right: 8px;
+    color: #333;
+  }
+  
+  .chart-controls button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #e0f7fa;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .chart-controls button:hover {
+    background-color: #b2ebf2;
+  }
+    

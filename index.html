@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoneyLens</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1>MoneyLens</h1>
+    <h2>Your own personal finance tracker</h2>
+    
+    <form id="transaction-form">
+      <select id="base-category">
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
+      </select>
+      
+      <select id="subcategory"></select>
+
+      <input type="text" id="new-category" placeholder="Add new subcategory" />
+      <button type="button" onclick="addNewCategory()">Add Category</button>
+
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <div class="budget">
+      <h3>Set Category Budgets</h3>
+      <select id="budget-category"></select>
+      <input type="number" id="budget-amount" placeholder="Budget for category" />
+      <button onclick="setCategoryBudget()">Set Budget</button>
+    </div>
+
+    <div class="summary">
+      <h3>Summary</h3>
+      <p>Total Income: ₹<span id="income">0</span></p>
+      <p>Total Expense: ₹<span id="expense">0</span></p>
+      <p>Balance: ₹<span id="balance">0</span></p>
+    </div>
+
+    <div id="budget-summary"></div>
+
+    <div id="chart-container">
+      <canvas id="chart"></canvas>
+    </div>
+    <div id="dashboard">
+      <h2><i class="fas fa-chart-pie"></i> Dashboard</h2>
+      <div class="chart-controls">
+        <button onclick="showChart('income')"><i class="fas fa-arrow-circle-down"></i> Income Chart</button>
+        <button onclick="showChart('expense')"><i class="fas fa-arrow-circle-up"></i> Expense Chart</button>
+      </div>
+    
+      <canvas id="incomeChart" class="chart"></canvas>
+      <canvas id="expenseChart" class="chart" style="display:none;"></canvas>
+    
+      <div id="budget-summary" class="budget-summary"></div>
+    </div>
+    
+    <!-- Load Font Awesome & Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <h3>Transactions</h3>
+    <ul id="transaction-list"></ul>
+    <div id="dashboard">
+      <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+    
+      <div class="chart-controls">
+        <button id="btnIncome"><i class="fas fa-arrow-circle-down"></i> Income Chart</button>
+        <button id="btnExpense"><i class="fas fa-arrow-circle-up"></i> Expense Chart</button>
+      </div>
+    
+      <canvas id="incomeChart" class="chart"></canvas>
+      <canvas id="expenseChart" class="chart" style="display:none;"></canvas>
+    
+      <div id="budget-summary" class="budget-summary"></div>
+    </div>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
